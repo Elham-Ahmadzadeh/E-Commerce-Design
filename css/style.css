@@ -1,0 +1,444 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bitter:wght@100&family=Josefin+Sans:ital,wght@1,200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,423;1,423&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Architects Daughter", cursive; Arial, Helvetica, sans-serif;
+  letter-spacing: 3px;
+  text-align: center;
+  line-height: 2;
+}
+
+/********************************************************/
+/* HEADER */
+.mainMenu {
+  font-family: "Josefin Sans";
+  position: sticky;
+  width: 100%;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#shopping-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: #a4b9ae83;
+}
+#search-nav {
+  font-family: FontAwesome;
+  font-style: normal;
+  margin-left: 0.5rem;
+}
+
+.shopping-cart-nav {
+  font-size: 45px;
+  margin-right: 1rem;
+}
+#search-nav {
+  width: 79%;
+  height: 3rem;
+  font-size: 30px;
+  border: none;
+}
+
+.logo-text {
+  
+  font-family: "Dancing Script", cursive;
+  font-size: 33px;
+  background-color: rgba(226, 224, 219, 0.596);
+  color: rgb(8, 22, 14);
+}
+
+.menu-wrap {
+  position: relative; /* IT SHOULS BE FIXED */
+  z-index: 1;
+  width: 100%;
+}
+
+.menu-wrap .toggler {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  cursor: pointer;
+  width: 50px;
+  height: 30px;
+  opacity: 0; /*  TRANPARENCY LEVEL TO HIDE CHECKBOX */
+}
+
+.menu-wrap .hamburger {
+  position: absolute;
+  z-index: 1;
+  width: 74px;
+  height: 50px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/***********************************************************/
+/* THE HAMBURGER LINES */
+.menu-wrap .hamburger > .hamburgerLine {
+  position: relative;
+  flex: none;
+  width: 100%;
+  height: 2px;
+  background: rgb(2, 66, 34);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease; /* IT TAKES TIME THE LINES TURN  */
+}
+
+.menu-wrap .hamburger > .hamburgerLine::before,    /* THE SECOND LINE */
+.menu-wrap .hamburger > .hamburgerLine::after {
+  content: ""; /* TO INSERT STH INSIDE HTML WE USE AFTER AND BEFORE AS WELL*/
+  position: absolute;
+  z-index: 1;
+  top: -10px;
+  width: 100%;
+  height: 2px;
+  background: inherit;
+}
+
+.menu-wrap .hamburger > .hamburgerLine::after {
+  top: 10px; /* WE USE THIS TO PUT THE THIRD LINE IN THIS POSITION */
+}
+
+.menu-wrap .toggler:checked + .hamburger > .hamburgerLine {
+  transform: rotate(135deg); /* THE LINES TURN AROUND */
+}
+
+/***********************************************************/
+/* TOGGLER ANIMATION  */
+.menu-wrap .toggler:checked + .hamburger > .hamburgerLine::before,    /* THE SECOND LINE */
+.menu-wrap .toggler:checked + .hamburger > .hamburgerLine::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+.menu-wrap .toggler:checked:hover + .hamburger > .hamburgerLine {
+  transform: rotate(225deg);
+}
+
+/**********************************************************/
+/* THE TWO SEPERATE SELECTOR WHICH SHARE THE SAME PARENT */
+.menu-wrap .toggler:checked ~ .menu {
+  visibility: visible;
+}
+
+.menu-wrap .toggler:checked ~ .menu > .mobile-toggle {
+  transform: scale(1);
+}
+
+.menu-wrap .menu {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(235, 247, 238);
+  visibility: hidden;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  top: 0; /* WHEN MY MENU OPENS THE  */
+}
+
+.menu-wrap .mobile-toggle > .menuList {
+  list-style: none;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+.menu-wrap .mobile-toggle > .menuList > .smoothScroll {
+  padding: 1rem;
+  text-decoration: none;
+  /*  transition: 0.2s ease; /* IT TAKES TIME TO HIDE THE SMOOTHSCROLL */
+  color: #000;
+}
+
+/*******************************************************************/
+/* MAIN */
+.slider {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: rgb(248, 245, 241);
+}
+
+.slideshow {
+  position: relative;
+  width: 500%;
+  left: 0;
+  animation: 25s slider infinite;
+}
+
+.slide-image {
+  max-width: 20%;
+  float: left;
+}
+
+.slideshow:hover {
+  animation-play-state: paused; /* TO PAUSE THE ANIMATION WHEN WE HOVER */
+}
+
+/***********************************************/
+/* SHOPPING BUTTON */
+.buying-button {
+  background: rgba(248, 245, 241, 0.013);
+}
+
+.shopping-button {
+  padding: 1rem 2rem;
+  border: 0.1em solid rgb(201, 193, 193);
+  background-color: rgb(248, 245, 241);
+  font-size: 1.5rem;
+  color: rgb(0, 47, 7);
+  border-radius: 13px;
+}
+
+.shopping-button:hover {
+  background-color: rgb(3, 58, 20);
+  color: rgb(236, 240, 240);
+}
+
+/*********************************************/
+/* ABOUT MATERAIAL */
+#about-materials {
+  padding: 18%;
+  background: rgb(243, 229, 229);
+  font-family: "Architects Daughter", cursive;
+}
+
+.intro-heading {
+  font-size: 20px;
+  padding: 1rem;
+  color: rgb(12, 1, 1);
+}
+
+.intro-explanation {
+  color: rgb(5, 0, 0);
+  padding: 1rem;
+}
+
+/**********************************************/
+/* PRESENTING TEAM */
+.presenting-team {
+  padding: 3rem;
+}
+
+.presenting-team,
+#contactForm,
+.contactFooter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.team-part-heading {
+  color: darkred;
+  font-size: 33px;
+}
+
+.introducing-member {
+  font-family: "Dancing Script", cursive;
+}
+
+.team-image {
+  padding: 2rem;
+}
+
+.manager-img {
+  width: 200px;
+  border-radius: 47%;
+}
+figcaption {
+  display: none;
+}
+/**********************************************/
+/* DESKTOP-TEXT */
+.desktop-intro {
+  display: none;
+}
+
+/*********************************************/
+/* FOLLOW BUTTON */
+.follow-btn {
+  padding: 1rem 1rem;
+  background-color: rgb(246, 231, 231);
+  color: rgb(31, 8, 8);
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 15px;
+}
+
+/*******************************************************************/
+footer {
+  background-color: rgb(230, 216, 199);
+}
+
+.reklam-heading {
+  font-family: "Bitter", serif;
+  font-size: 1rem;
+  margin: 0.1rem;
+  color: rgb(29, 2, 2);
+}
+
+.mainText {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.contactLine {
+  width: 100%;
+  height: 1px;
+  background: rgb(85, 83, 83);
+}
+
+.contactText {
+  padding: 1rem 2rem;
+  color: rgb(104, 71, 28);
+}
+
+#firstname,
+#email,
+#bigMessage,
+#subject {
+  padding: 1rem 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px;
+  margin: 0.5rem;
+}
+
+.sendButton {
+  background-color: rgb(228, 226, 226);
+  color: black;
+  padding: 0.65rem 1rem;
+  box-shadow: 0 0 5px;
+  margin: 0.2rem;
+  cursor: pointer;
+}
+
+.gridLine {
+  width: 100%;
+  background-color: rgb(224, 201, 170);
+  padding: 1rem 1rem;
+  border-radius: 8px;
+  margin: 0.5rem;
+}
+
+.follow-social-media {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.85rem;
+  margin: 0.2rem;
+}
+
+/* SOCIAL MEDIA ICON */
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  line-height: 2rem;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.fa-facebook {
+  color: blue;
+}
+
+.fa-instagram {
+  color: palevioletred;
+}
+
+.fa-linkedin {
+  color: rgb(28, 103, 128);
+}
+
+/**********************************************/
+/* KEY FRAMES */
+@keyframes slider {
+  0% {
+    left: 0;
+  }
+  10% {
+    left: 0;
+  }
+  25% {
+    left: -100%;
+  }
+  45% {
+    left: -100%;
+  }
+  50% {
+    left: -200%;
+  }
+  70% {
+    left: -200%;
+  }
+  75% {
+    left: -300%;
+  }
+  100% {
+    left: -300%;
+  }
+}
+
+/**************************************************/
+/* MEDIA QUERY */
+@media screen and (min-width: 700px) and (max-width: 1440px) {
+  .mainMenu {
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: #a4b9ae83;
+  }
+  .hamburger {
+    margin-top: 1rem;
+  }
+  #shopping-nav,
+  .logo-text {
+    background-color: transparent;
+    font-size: 40px;
+  }
+  .desktop-intro,
+  .desktop-heading {
+    display: block;
+    background: rgb(90, 85, 88);
+    padding: 10%;
+   
+  }
+  .desktop-heading {
+    font-size: 3rem;
+  }
+  figcaption {
+    display: block;
+    font-size: 2rem;
+    color: rgb(87, 7, 7);
+  }
+  footer {
+    height: 100%;
+    background-color: rgb(230, 216, 199);
+  }
+}
+
+   
+

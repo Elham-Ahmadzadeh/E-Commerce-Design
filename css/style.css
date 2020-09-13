@@ -38,28 +38,26 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   background-color: #a4b9ae83;
 }
+
+/* THE SEARCH ICON INSIDE THE SEARCH INPUT */
 #search-nav {
   font-family: FontAwesome;
   font-style: normal;
-  margin-left: 0.5rem;
-}
-
-.shopping-cart-nav {
-  font-size: 45px;
-  margin-right: 1rem;
-}
-#search-nav {
-  width: 79%;
+  width: 78%;
+  margin-left: 0.7rem;
   height: 3rem;
   font-size: 30px;
   border: none;
 }
 
+.shopping-cart-nav {
+  font-size: 45px;
+  margin-right: 0.8rem;
+}
+
 .logo-text {
-  
   font-family: "Dancing Script", cursive;
   font-size: 33px;
   background-color: rgba(226, 224, 219, 0.596);
@@ -74,13 +72,13 @@ body {
 
 .menu-wrap .toggler {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 7px;
+  left: 9px;
   z-index: 2;
-  cursor: pointer;
-  width: 50px;
-  height: 30px;
-  opacity: 0; /*  TRANPARENCY LEVEL TO HIDE CHECKBOX */
+  cursor: pointer; /* TO INSERT THE CHECKBOX BEHIND THE MENU */
+  width: 60px;
+  height: 71px;
+  opacity: 0; /* TRANPARENCY LEVEL TO HIDE CHECKBOX */
 }
 
 .menu-wrap .hamburger {
@@ -102,7 +100,6 @@ body {
   width: 100%;
   height: 2px;
   background: rgb(2, 66, 34);
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -210,11 +207,10 @@ body {
 
 .shopping-button {
   padding: 1rem 2rem;
-  border: 0.1em solid rgb(201, 193, 193);
-  background-color: rgb(248, 245, 241);
-  font-size: 1.5rem;
-  color: rgb(0, 47, 7);
-  border-radius: 13px;
+  background-color: white;
+  border: 1px solid white;
+  font-size: 1.7rem;
+  color: rgb(1, 32, 6);
 }
 
 .shopping-button:hover {
@@ -244,7 +240,7 @@ body {
 /**********************************************/
 /* PRESENTING TEAM */
 .presenting-team {
-  padding: 3rem;
+  padding: 2rem;
 }
 
 .presenting-team,
@@ -273,12 +269,11 @@ body {
   width: 200px;
   border-radius: 47%;
 }
-figcaption {
-  display: none;
-}
+
 /**********************************************/
 /* DESKTOP-TEXT */
-.desktop-intro {
+.desktop-intro,
+figcaption  {
   display: none;
 }
 
@@ -293,9 +288,6 @@ figcaption {
 }
 
 /*******************************************************************/
-footer {
-  background-color: rgb(230, 216, 199);
-}
 
 .reklam-heading {
   font-family: "Bitter", serif;
@@ -307,7 +299,10 @@ footer {
 .mainText {
   font-family: "Josefin Sans", sans-serif;
 }
-
+.contactFooter {
+  padding: 3rem;
+    background-color: rgb(230, 216, 199);
+}
 .contactLine {
   width: 100%;
   height: 1px;
@@ -349,16 +344,12 @@ footer {
 .follow-social-media {
   font-family: "Kumbh Sans", sans-serif;
   font-size: 0.85rem;
-  margin: 0.2rem;
 }
 
 /* SOCIAL MEDIA ICON */
 
 .social-media {
-  display: flex;
-  justify-content: center;
-  line-height: 2rem;
-  font-size: 25px;
+  font-size: 30px;
   cursor: pointer;
 }
 
@@ -409,11 +400,12 @@ footer {
   .mainMenu {
     display: flex;
     flex-direction: row-reverse;
-    background-color: #a4b9ae83;
+    background-color: #c3e2d25d;
   }
   .hamburger {
     margin-top: 1rem;
   }
+
   #shopping-nav,
   .logo-text {
     background-color: transparent;
@@ -422,9 +414,8 @@ footer {
   .desktop-intro,
   .desktop-heading {
     display: block;
-    background: rgb(90, 85, 88);
+    background: rgb(231, 251, 235);
     padding: 10%;
-   
   }
   .desktop-heading {
     font-size: 3rem;
@@ -432,13 +423,7 @@ footer {
   figcaption {
     display: block;
     font-size: 2rem;
-    color: rgb(87, 7, 7);
+    color: rgb(82, 3, 7);
   }
-  footer {
-    height: 100%;
-    background-color: rgb(230, 216, 199);
-  }
+ 
 }
-
-   
-

@@ -67,7 +67,6 @@ body {
 .menu-wrap {
   position: relative; /* IT SHOULS BE FIXED */
   z-index: 1;
-  width: 100%;
 }
 
 .menu-wrap .toggler {

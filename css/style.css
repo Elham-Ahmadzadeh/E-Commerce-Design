@@ -58,20 +58,21 @@ body {
 
 .logo-text {
   font-family: "Dancing Script", cursive;
-  font-size: 33px;
+  font-size: 28px;
   background-color: rgba(226, 224, 219, 0.596);
   color: rgb(8, 22, 14);
-  
 }
 
 .menu-wrap {
   position: relative; /* IT SHOULS BE FIXED */
   z-index: 1;
+  display: flex;
+  align-items: flex-end;
 }
 
 .menu-wrap .toggler {
   position: absolute;
-  top: 7px;
+  top: -57px;
   left: 9px;
   z-index: 2;
   cursor: pointer; /* TO INSERT THE CHECKBOX BEHIND THE MENU */
@@ -278,8 +279,7 @@ body {
 
 /**********************************************/
 /* DESKTOP-TEXT */
-.desktop-intro,
-figcaption {
+.desktop-intro {
   display: none;
 }
 
@@ -305,10 +305,12 @@ figcaption {
 .mainText {
   font-family: "Josefin Sans", sans-serif;
 }
+
 .contactFooter {
   padding: 3rem;
   background-color: rgb(230, 216, 199);
 }
+
 .contactLine {
   width: 100%;
   height: 1px;
@@ -370,6 +372,11 @@ figcaption {
 .fa-linkedin {
   color: rgb(28, 103, 128);
 }
+figcaption {
+  display: block;
+  font-size: 2rem;
+  color: rgb(82, 3, 7);
+}
 
 /**********************************************/
 /* KEY FRAMES */
@@ -406,16 +413,26 @@ figcaption {
   .mainMenu {
     display: flex;
     flex-direction: row-reverse;
+    justify-content: space-between;
     background-color: #c3e2d25d;
   }
-  .hamburger {
-    margin-top: 1rem;
-  }
 
+  .logo-text {
+    margin-top: 0.5rem;
+    margin-left: 2rem;
+  }
+  .menu-wrap {
+    align-items: flex-start;
+  }
+  .menu-wrap .toggler {
+    top: 1px;
+  }
   #shopping-nav,
   .logo-text {
     background-color: transparent;
-    font-size: 40px;
+  }
+  #search-nav {
+    font-size: 18px;
   }
   .desktop-intro,
   .desktop-heading {
@@ -425,10 +442,5 @@ figcaption {
   }
   .desktop-heading {
     font-size: 3rem;
-  }
-  figcaption {
-    display: block;
-    font-size: 2rem;
-    color: rgb(82, 3, 7);
   }
 }

@@ -70,7 +70,8 @@ body {
 }
 
 .menu-wrap {
-  position: relative; /* IT SHOULS BE FIXED */
+  position: relative;
+  /* IT SHOULS BE FIXED */
   z-index: 1;
   display: flex;
   align-items: flex-end;
@@ -81,10 +82,12 @@ body {
   top: -57px;
   left: 9px;
   z-index: 2;
-  cursor: pointer; /* TO INSERT THE CHECKBOX BEHIND THE MENU */
+  cursor: pointer;
+  /* TO INSERT THE CHECKBOX BEHIND THE MENU */
   width: 60px;
   height: 71px;
-  opacity: 0; /* TRANPARENCY LEVEL TO HIDE CHECKBOX */
+  opacity: 0;
+  /* TRANPARENCY LEVEL TO HIDE CHECKBOX */
 }
 
 .menu-wrap .hamburger {
@@ -99,7 +102,7 @@ body {
 
 /***********************************************************/
 /* THE HAMBURGER LINES */
-.menu-wrap .hamburger > .hamburgerLine {
+.menu-wrap .hamburger>.hamburgerLine {
   position: relative;
   flex: none;
   width: 100%;
@@ -108,12 +111,15 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.4s ease; /* IT TAKES TIME THE LINES TURN  */
+  transition: all 0.4s ease;
+  /* IT TAKES TIME THE LINES TURN  */
 }
 
-.menu-wrap .hamburger > .hamburgerLine::before,    /* THE SECOND LINE */
-.menu-wrap .hamburger > .hamburgerLine::after {
-  content: ""; /* TO INSERT STH INSIDE HTML WE USE AFTER AND BEFORE AS WELL*/
+.menu-wrap .hamburger>.hamburgerLine::before,
+/* THE SECOND LINE */
+.menu-wrap .hamburger>.hamburgerLine::after {
+  content: "";
+  /* TO INSERT STH INSIDE HTML WE USE AFTER AND BEFORE AS WELL*/
   position: absolute;
   z-index: 1;
   top: -10px;
@@ -122,41 +128,45 @@ body {
   background: inherit;
 }
 
-.menu-wrap .hamburger > .hamburgerLine::after {
-  content: "Meny"; /* TO PUT MENU WORD AFTER THREE LINES */
+.menu-wrap .hamburger>.hamburgerLine::after {
+  content: "Meny";
+  /* TO PUT MENU WORD AFTER THREE LINES */
 }
 
-.menu-wrap .hamburger > .hamburgerLine::after {
-  top: 10px; /* WE USE THIS TO PUT THE THIRD LINE IN THIS POSITION */
+.menu-wrap .hamburger>.hamburgerLine::after {
+  top: 10px;
+  /* WE USE THIS TO PUT THE THIRD LINE IN THIS POSITION */
 }
 
-.menu-wrap .toggler:checked + .hamburger > .hamburgerLine {
-  transform: rotate(135deg); /* THE LINES TURN AROUND */
+.menu-wrap .toggler:checked+.hamburger>.hamburgerLine {
+  transform: rotate(135deg);
+  /* THE LINES TURN AROUND */
 }
 
 /***********************************************************/
 /* TOGGLER ANIMATION  */
-.menu-wrap .toggler:checked + .hamburger > .hamburgerLine::before,    /* THE SECOND LINE */
-.menu-wrap .toggler:checked + .hamburger > .hamburgerLine::after {
+.menu-wrap .toggler:checked+.hamburger>.hamburgerLine::before,
+/* THE SECOND LINE */
+.menu-wrap .toggler:checked+.hamburger>.hamburgerLine::after {
   top: 0;
   transform: rotate(90deg);
 }
 
-.menu-wrap .toggler:checked:hover + .hamburger > .hamburgerLine {
+.menu-wrap .toggler:checked:hover+.hamburger>.hamburgerLine {
   transform: rotate(225deg);
 }
 
-.menu-wrap .toggler:checked + .hamburger > .hamburgerLine::after {
+.menu-wrap .toggler:checked+.hamburger>.hamburgerLine::after {
   opacity: 0;
 }
 
 /**********************************************************/
 /* THE TWO SEPERATE SELECTOR WHICH SHARE THE SAME PARENT */
-.menu-wrap .toggler:checked ~ .menu {
+.menu-wrap .toggler:checked~.menu {
   visibility: visible;
 }
 
-.menu-wrap .toggler:checked ~ .menu > .mobile-toggle {
+.menu-wrap .toggler:checked~.menu>.mobile-toggle {
   transform: scale(1.1);
 }
 
@@ -171,16 +181,17 @@ body {
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  top: 0; /* WHEN MY MENU OPENS THE  */
+  top: 0;
+  /* WHEN MY MENU OPENS THE  */
 }
 
-.menu-wrap .mobile-toggle > .menuList {
+.menu-wrap .mobile-toggle>.menuList {
   list-style: none;
   font-size: 1.5rem;
   padding: 1rem;
 }
 
-.menu-wrap .mobile-toggle > .menuList > .smoothScroll {
+.menu-wrap .mobile-toggle>.menuList>.smoothScroll {
   padding: 1rem;
   text-decoration: none;
   /*  transition: 0.2s ease; /* IT TAKES TIME TO HIDE THE SMOOTHSCROLL */
@@ -209,7 +220,8 @@ body {
 }
 
 .slideshow:hover {
-  animation-play-state: paused; /* TO PAUSE THE ANIMATION WHEN WE HOVER */
+  animation-play-state: paused;
+  /* TO PAUSE THE ANIMATION WHEN WE HOVER */
 }
 
 /***********************************************/
@@ -300,7 +312,7 @@ body {
 }
 
 /*******************************************************************/
-
+/* MAIN TEXT */
 .reklam-heading {
   font-family: "Bitter", serif;
   font-size: 1rem;
@@ -360,6 +372,7 @@ body {
   font-size: 0.85rem;
 }
 
+/*****************************************************************/
 /* SOCIAL MEDIA ICON */
 
 .social-media {
@@ -378,6 +391,7 @@ body {
 .fa-linkedin {
   color: rgb(28, 103, 128);
 }
+
 figcaption {
   display: block;
   font-size: 2rem;
@@ -390,32 +404,42 @@ figcaption {
   0% {
     left: 0;
   }
+
   10% {
     left: 0;
   }
+
   25% {
     left: -100%;
   }
+
   45% {
     left: -100%;
   }
+
   50% {
     left: -200%;
   }
+
   70% {
     left: -200%;
   }
+
   75% {
     left: -300%;
   }
+
   100% {
     left: -300%;
   }
+
 }
+
 
 /**************************************************/
 /* MEDIA QUERY */
 @media screen and (min-width: 700px) and (max-width: 1440px) {
+
   .mainMenu {
     display: flex;
     flex-direction: row-reverse;
@@ -427,26 +451,33 @@ figcaption {
     margin-top: 0.5rem;
     margin-left: 2rem;
   }
+
   .menu-wrap {
     align-items: flex-start;
   }
+
   .menu-wrap .toggler {
     top: 1px;
   }
+
   #shopping-nav,
   .logo-text {
     background-color: transparent;
   }
+
   #search-nav {
     font-size: 18px;
   }
+
   .desktop-intro,
   .desktop-heading {
-    display: block;
+    display: block;    /* DESKTOP TEXT DISPLAY IS NONE GERE CHANGED TO BLOCK */
     background: rgb(231, 251, 235);
     padding: 10%;
   }
+
   .desktop-heading {
     font-size: 3rem;
-  }
+  } 
+
 }

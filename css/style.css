@@ -51,6 +51,12 @@ body {
   border: none;
 }
 
+.search-box input[type="search"] {
+  width: 100%;
+  padding: 10px;
+  padding-right: 10px;
+}
+
 .shopping-cart-nav {
   font-size: 45px;
   margin-right: 0.8rem;
@@ -151,7 +157,7 @@ body {
 }
 
 .menu-wrap .toggler:checked ~ .menu > .mobile-toggle {
-  transform: scale(1);
+  transform: scale(1.1);
 }
 
 .menu-wrap .menu {
@@ -164,7 +170,7 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   top: 0; /* WHEN MY MENU OPENS THE  */
 }
 

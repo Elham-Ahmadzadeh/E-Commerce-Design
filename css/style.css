@@ -497,8 +497,9 @@ figcaption {
 
 }
 
-/* SCREENS OVER 680PX */
-@media screen and (min-width: 680px) and (max-width: 1440px) {
+
+/* SCREENS OVER 650PX */
+@media screen and (min-width: 650px) and (max-width: 1440px) {
 
     #image-boxes {
       flex-direction: row;

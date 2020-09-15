@@ -20,6 +20,7 @@ body {
   letter-spacing: 3px;
   text-align: center;
   line-height: 2;
+  color: rgb(8, 22, 14);
 }
 
 /********************************************************/
@@ -31,6 +32,9 @@ body {
   top: 0;
   left: 0;
   right: 0;
+  min-height: 16%;
+  background: rgba(166, 189, 211, 0.397);
+
 }
 
 #shopping-nav {
@@ -54,7 +58,6 @@ body {
 .search-box input[type="search"] {
   width: 100%;
   padding: 10px;
-  padding-right: 10px;
 }
 
 .shopping-cart-nav {
@@ -65,8 +68,7 @@ body {
 .logo-text {
   font-family: "Dancing Script", cursive;
   font-size: 28px;
-  background-color: rgba(226, 224, 219, 0.596);
-  color: rgb(8, 22, 14);
+
 }
 
 .menu-wrap {
@@ -235,7 +237,7 @@ body {
   background-color: white;
   border: 1px solid white;
   font-size: 1.7rem;
-  color: rgb(1, 32, 6);
+
 }
 
 .shopping-button:hover {
@@ -254,11 +256,10 @@ body {
 .intro-heading {
   font-size: 20px;
   padding: 1rem;
-  color: rgb(12, 1, 1);
+
 }
 
 .intro-explanation {
-  color: rgb(5, 0, 0);
   padding: 1rem;
 }
 
@@ -438,46 +439,46 @@ figcaption {
 
 /**************************************************/
 /* MEDIA QUERY */
-@media screen and (min-width: 700px) and (max-width: 1440px) {
+@media screen and (min-width: 900px) and (max-width: 1440px) {
 
   .mainMenu {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
+    align-items: center;
     background-color: #c3e2d25d;
+    min-height: 1%;
   }
 
-  .logo-text {
-    margin-top: 0.5rem;
-    margin-left: 2rem;
-  }
-
-  .menu-wrap {
-    align-items: flex-start;
-  }
-
-  .menu-wrap .toggler {
-    top: 1px;
+  .menu-wrap,
+  .toggler {
+    top: 17px;
   }
 
   #shopping-nav,
   .logo-text {
     background-color: transparent;
+
+  }
+
+  .logo-text {
+    margin-right: -8rem;
   }
 
   #search-nav {
-    font-size: 18px;
+    font-size: 31px;
   }
 
   .desktop-intro,
   .desktop-heading {
-    display: block;    /* DESKTOP TEXT DISPLAY IS NONE GERE CHANGED TO BLOCK */
+    display: block;
+    /* DESKTOP TEXT DISPLAY IS NONE GERE CHANGED TO BLOCK */
     background: rgb(231, 251, 235);
     padding: 10%;
   }
 
   .desktop-heading {
     font-size: 3rem;
-  } 
+  }
 
 }

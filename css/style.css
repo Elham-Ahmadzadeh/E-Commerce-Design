@@ -325,6 +325,32 @@ body {
   font-family: "Josefin Sans", sans-serif;
 }
 
+/*****************************************************/
+
+/* DESIGN.HTML */
+/* MAIN */
+
+#image-boxes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+}
+
+.image-section {
+  width: 83%;
+  margin: 2rem;
+}
+
+.design-img {
+  width: 70%;
+  height: 65%;
+}
+
+/***************************************************/
+/* CONTACT FOOTER */
 .contactFooter {
   padding: 3rem;
   background-color: rgb(230, 216, 199);
@@ -458,7 +484,6 @@ figcaption {
   #shopping-nav,
   .logo-text {
     background-color: transparent;
-
   }
 
   .logo-text {
@@ -467,6 +492,16 @@ figcaption {
 
   #search-nav {
     font-size: 31px;
+  }
+
+  #image-boxes {
+    flex-direction: row;
+
+  }
+
+  .image-section{
+    width: 34%;
+
   }
 
   .desktop-intro,

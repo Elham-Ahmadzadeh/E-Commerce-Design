@@ -32,16 +32,16 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  min-height: 16%;
+  min-height: 17%;
   background: rgba(166, 211, 188, 0.397);
 
 }
 
 #shopping-nav {
   display: flex;
-  justify-content: space-between;
+
   align-items: center;
-  background-color: #a4b9ae83;
+  background-color: rgba(175, 129, 236, 0.185);
 }
 
 /* THE SEARCH ICON INSIDE THE SEARCH INPUT */
@@ -237,10 +237,11 @@ body {
   padding: 1rem 2rem;
   font-size: 1.7rem;
 }
+
 .shopping-button {
   background-color: white;
   border: 1px solid white;
-  
+
 }
 
 .shopping-button:hover {
@@ -308,11 +309,16 @@ body {
 /*********************************************/
 /* FOLLOW BUTTON */
 .follow-btn {
-  padding: 1rem 1rem;
-  background-color: rgb(246, 231, 231);
-  color: rgb(31, 8, 8);
-  font-family: "Josefin Sans", sans-serif;
-  font-size: 15px;
+  padding: 1rem;
+  background-color: rgb(243, 237, 242);
+  font-size: 1rem;
+
+  border: 1px solid rgb(146, 6, 39);
+}
+
+.follow-btn:hover {
+  color: rgb(243, 239, 239);
+  background: rgb(94, 7, 29);
 }
 
 /*******************************************************************/
@@ -362,14 +368,14 @@ body {
 }
 
 .load-btn:hover {
-   color: rgb(93, 226, 10);
+  color: rgb(93, 226, 10);
 
 }
 
 /***************************************************/
 /* CONTACT FOOTER */
 .contactFooter {
-  padding: 3rem;
+  padding: 2rem;
   background-color: rgb(230, 216, 199);
 }
 
@@ -379,25 +385,33 @@ body {
   background: rgb(85, 83, 83);
 }
 
-.contactText {
+.contactText,
+.contact-heading {
   padding: 1rem 2rem;
   color: rgb(104, 71, 28);
 }
 
+
 #firstname,
 #email,
-#bigMessage,
-#subject {
-  padding: 1rem 1rem;
+#bigMessage {
   border-radius: 8px;
   box-shadow: 0 0 10px;
   margin: 0.5rem;
 }
 
+
+#contactForm input[type="text"],
+input[type="email"],
+#bigMessage {
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+
 .sendButton {
   background-color: rgb(228, 226, 226);
-  color: black;
-  padding: 0.65rem 1rem;
+  padding: 1rem;
   box-shadow: 0 0 5px;
   margin: 0.2rem;
   cursor: pointer;
@@ -406,7 +420,7 @@ body {
 .gridLine {
   width: 100%;
   background-color: rgb(224, 201, 170);
-  padding: 1rem 1rem;
+  padding: 1rem;
   border-radius: 8px;
   margin: 0.5rem;
 }
@@ -482,7 +496,7 @@ figcaption {
 
 /**************************************************/
 /* MEDIA QUERY */
-@media screen and (min-width: 900px) and (max-width: 1440px) {
+@media screen and (min-width: 870px) and (max-width: 1440px) {
 
   .mainMenu {
     display: flex;
@@ -511,31 +525,42 @@ figcaption {
     font-size: 31px;
   }
 
+  #firstname,
+  #email,
+  #bigMessage {
+    width: 50rem
+  }
 
 }
 
 
-/* SCREENS OVER 650PX */
+/* SCREENS OVER 500PX */
 @media screen and (min-width: 500px) and (max-width: 1440px) {
 
-    #image-boxes {
-      flex-direction: row;
+  #image-boxes {
+    flex-direction: row;
 
-    }
-     .image-section {
-       width: 34%;
-    }
-      
-    
-    .desktop-intro,
-    .desktop-heading {
-         display: block;
-         /* DESKTOP TEXT DISPLAY WAS NONE HERE CHANGED TO BLOCK */
-         background: rgb(231, 251, 235);
-         padding: 10%;
-    }
+  }
 
-    .desktop-heading {
-       font-size: 3rem;
-     }
+  .image-section {
+    width: 34%;
+  }
+
+  .desktop-intro,
+  .desktop-heading {
+    display: block;
+    /* DESKTOP TEXT DISPLAY WAS NONE HERE CHANGED TO BLOCK */
+    background: rgb(231, 251, 235);
+    padding: 10%;
+  }
+
+  .desktop-heading {
+    font-size: 3rem;
+  }
+
+  .sendButton {
+    padding: 1rem 3rem;
+
+  }
+
 }

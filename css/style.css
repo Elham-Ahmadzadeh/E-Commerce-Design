@@ -494,26 +494,30 @@ figcaption {
     font-size: 31px;
   }
 
-  #image-boxes {
-    flex-direction: row;
 
-  }
+}
 
-  .image-section{
-    width: 34%;
+/* SCREENS OVER 680PX */
+@media screen and (min-width: 680px) and (max-width: 1440px) {
 
-  }
+    #image-boxes {
+      flex-direction: row;
 
-  .desktop-intro,
-  .desktop-heading {
-    display: block;
-    /* DESKTOP TEXT DISPLAY IS NONE GERE CHANGED TO BLOCK */
-    background: rgb(231, 251, 235);
-    padding: 10%;
-  }
+    }
+     .image-section {
+       width: 34%;
+    }
+      
+    
+    .desktop-intro,
+    .desktop-heading {
+         display: block;
+         /* DESKTOP TEXT DISPLAY WAS NONE HERE CHANGED TO BLOCK */
+         background: rgb(231, 251, 235);
+         padding: 10%;
+    }
 
-  .desktop-heading {
-    font-size: 3rem;
-  }
-
+    .desktop-heading {
+       font-size: 3rem;
+     }
 }

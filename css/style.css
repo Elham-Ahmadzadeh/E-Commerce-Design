@@ -67,7 +67,6 @@ body {
 .logo-text {
   font-family: "Dancing Script", cursive;
   font-size: 28px;
-
 }
 
 .menu-wrap {
@@ -386,7 +385,6 @@ body {
 }
 
 
-
 .contactText,
 .contact-heading {
   padding: 1rem 2rem;
@@ -505,6 +503,7 @@ figcaption {
 @media screen and (min-width: 870px) and (max-width: 1440px) {
 
   .mainMenu {
+    position: fixed;
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
@@ -542,7 +541,8 @@ figcaption {
 
 /* SCREENS OVER 500PX */
 @media screen and (min-width: 500px) and (max-width: 1440px) {
-
+ 
+ 
   #image-boxes {
     flex-direction: row;
 

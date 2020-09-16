@@ -251,7 +251,7 @@ body {
 /*********************************************/
 /* ABOUT MATERAIAL */
 #about-materials {
-  padding: 18%;
+  padding: 13%;
   background: rgb(243, 229, 229);
   font-family: "Architects Daughter", cursive;
 }
@@ -353,6 +353,7 @@ body {
 .image-section {
   width: 83%;
   margin: 2rem;
+ 
 }
 
 .design-img {
@@ -384,10 +385,16 @@ body {
   background: rgb(85, 83, 83);
 }
 
+
+
 .contactText,
 .contact-heading {
   padding: 1rem 2rem;
-  color: rgb(104, 71, 28);
+ 
+}
+
+.contactText {
+    color: rgb(104, 71, 28);
 }
 
 
@@ -550,7 +557,7 @@ figcaption {
     display: block;
     /* DESKTOP TEXT DISPLAY WAS NONE HERE CHANGED TO BLOCK */
     background: rgb(231, 251, 235);
-    padding: 10%;
+    padding: 5%;
   }
 
   .desktop-heading {

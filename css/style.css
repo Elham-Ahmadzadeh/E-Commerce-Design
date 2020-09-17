@@ -64,6 +64,7 @@ body {
   margin-right: 0.8rem;
 }
 
+
 .logo-text {
   font-family: "Dancing Script", cursive;
   font-size: 28px;
@@ -76,6 +77,7 @@ body {
   display: flex;
   align-items: flex-end;
 }
+
 
 .menu-wrap .toggler {
   position: absolute;
@@ -90,6 +92,7 @@ body {
   /* TRANPARENCY LEVEL TO HIDE CHECKBOX */
 }
 
+
 .menu-wrap .hamburger {
   position: absolute;
   z-index: 1;
@@ -99,6 +102,7 @@ body {
   display: flex;
   align-items: center;
 }
+
 
 /***********************************************************/
 /* THE HAMBURGER LINES */
@@ -115,6 +119,7 @@ body {
   /* IT TAKES TIME THE LINES TURN  */
 }
 
+
 .menu-wrap .hamburger>.hamburgerLine::before,
 /* THE SECOND LINE */
 .menu-wrap .hamburger>.hamburgerLine::after {
@@ -128,20 +133,24 @@ body {
   background: inherit;
 }
 
+
 .menu-wrap .hamburger>.hamburgerLine::after {
   content: "Meny";
   /* TO PUT MENU WORD AFTER THREE LINES */
 }
+
 
 .menu-wrap .hamburger>.hamburgerLine::after {
   top: 10px;
   /* WE USE THIS TO PUT THE THIRD LINE IN THIS POSITION */
 }
 
+
 .menu-wrap .toggler:checked+.hamburger>.hamburgerLine {
   transform: rotate(135deg);
   /* THE LINES TURN AROUND */
 }
+
 
 /***********************************************************/
 /* TOGGLER ANIMATION  */
@@ -152,13 +161,16 @@ body {
   transform: rotate(90deg);
 }
 
+
 .menu-wrap .toggler:checked:hover+.hamburger>.hamburgerLine {
   transform: rotate(225deg);
 }
 
+
 .menu-wrap .toggler:checked+.hamburger>.hamburgerLine::after {
   opacity: 0;
 }
+
 
 /**********************************************************/
 /* THE TWO SEPERATE SELECTOR WHICH SHARE THE SAME PARENT */
@@ -166,9 +178,11 @@ body {
   visibility: visible;
 }
 
+
 .menu-wrap .toggler:checked~.menu>.mobile-toggle {
   transform: scale(1.1);
 }
+
 
 .menu-wrap .menu {
   position: fixed;
@@ -185,11 +199,13 @@ body {
   /* WHEN MY MENU OPENS THE  */
 }
 
+
 .menu-wrap .mobile-toggle>.menuList {
   list-style: none;
   font-size: 1.5rem;
   padding: 1rem;
 }
+
 
 .menu-wrap .mobile-toggle>.menuList>.smoothScroll {
   padding: 1rem;
@@ -198,14 +214,55 @@ body {
   color: #000;
 }
 
+
 /*******************************************************************/
 /* MAIN */
+/* DESKTOP-IMG  */
+.desktop-img {
+  display: none;
+  width: 100%;
+  height: 70vh;
+  background-image: url("../image/golden-background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.medlem-text,
+.medlem-btn {
+  position: absolute;
+}
+
+
+.medlem-text {
+  top: 30%;
+  left: 32%;
+  font-size: 40px;
+}
+
+
+.medlem-btn {
+  top: 40%;
+  left: 35%;
+  font-size: 35px;
+  background-color: transparent;
+  border: 4px solid rgb(24, 19, 19);
+  padding: 2rem 3.3rem;
+  text-decoration: none;
+  color: #000;
+}
+
+
+/**********************************************************************/
+/* slide show */
 .slider {
   overflow: hidden;
   display: flex;
   flex-direction: column;
   background: rgb(248, 245, 241);
 }
+
 
 .slideshow {
   position: relative;
@@ -214,15 +271,18 @@ body {
   animation: 25s slider infinite;
 }
 
+
 .slide-image {
   max-width: 20%;
   float: left;
 }
 
+
 .slideshow:hover {
   animation-play-state: paused;
   /* TO PAUSE THE ANIMATION WHEN WE HOVER */
 }
+
 
 /***********************************************/
 /* SHOPPING BUTTON */
@@ -230,22 +290,26 @@ body {
   background: rgba(248, 245, 241, 0.013);
 }
 
+
 .shopping-button,
 .load-btn {
   padding: 1rem 2rem;
   font-size: 1.7rem;
 }
 
+
 .shopping-button {
   background-color: white;
-  border: 1px solid white;
+  border: 3px solid rgba(248, 245, 241, 0.013);
 
 }
+
 
 .shopping-button:hover {
   background-color: rgb(3, 58, 20);
   color: rgb(236, 240, 240);
 }
+
 
 /*********************************************/
 /* ABOUT MATERAIAL */
@@ -255,21 +319,25 @@ body {
   font-family: "Architects Daughter", cursive;
 }
 
+
 .intro-heading {
   font-size: 20px;
   padding: 1rem;
 
 }
 
+
 .intro-explanation {
   padding: 1rem;
 }
+
 
 /**********************************************/
 /* PRESENTING TEAM */
 .presenting-team {
   padding: 2rem;
 }
+
 
 .presenting-team,
 #contactForm,
@@ -280,29 +348,44 @@ body {
   flex-direction: column;
 }
 
+
 .team-part-heading {
   color: darkred;
   font-size: 33px;
 }
 
+
 .introducing-member {
   font-family: "Dancing Script", cursive;
 }
 
+
 .team-image {
   padding: 2rem;
 }
+
 
 .manager-img {
   width: 200px;
   border-radius: 47%;
 }
 
+
 /**********************************************/
 /* DESKTOP-TEXT */
-.desktop-intro {
+.desktop-intro,
+.desktop-heading {
   display: none;
+  /* DESKTOP TEXT DISPLAY WAS NONE HERE CHANGED TO BLOCK */
+  background: rgb(231, 251, 235);
+  padding: 5%;
 }
+
+
+.desktop-heading {
+  font-size: 3rem;
+}
+
 
 /*********************************************/
 /* FOLLOW BUTTON */
@@ -310,14 +393,15 @@ body {
   padding: 1rem;
   background-color: rgb(243, 237, 242);
   font-size: 1rem;
-
   border: 1px solid rgb(146, 6, 39);
 }
+
 
 .follow-btn:hover {
   color: rgb(243, 239, 239);
   background: rgb(94, 7, 29);
 }
+
 
 /*******************************************************************/
 /* MAIN TEXT */
@@ -328,17 +412,19 @@ body {
   color: rgb(29, 2, 2);
 }
 
+
 .mainText {
   font-family: "Josefin Sans", sans-serif;
 }
 
-/*****************************************************/
 
+/*****************************************************/
 /* DESIGN.HTML */
 /* MAIN */
 .heading-design {
   font-size: 2rem;
 }
+
 
 #image-boxes {
   display: flex;
@@ -346,19 +432,20 @@ body {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-
 }
+
 
 .image-section {
   width: 83%;
   margin: 2rem;
- 
 }
+
 
 .design-img {
   width: 70%;
   height: 65%;
 }
+
 
 .load-btn {
   border: solid 1px gold;
@@ -366,10 +453,12 @@ body {
   margin-bottom: 1rem;
 }
 
+
 .load-btn:hover {
   color: rgb(93, 226, 10);
 
 }
+
 
 /***************************************************/
 /* CONTACT FOOTER */
@@ -377,6 +466,7 @@ body {
   padding: 2rem;
   background-color: rgb(230, 216, 199);
 }
+
 
 .contactLine {
   width: 100%;
@@ -388,11 +478,12 @@ body {
 .contactText,
 .contact-heading {
   padding: 1rem 2rem;
- 
+
 }
 
+
 .contactText {
-    color: rgb(104, 71, 28);
+  color: rgb(104, 71, 28);
 }
 
 
@@ -421,6 +512,7 @@ input[type="email"],
   cursor: pointer;
 }
 
+
 .gridLine {
   width: 100%;
   background-color: rgb(224, 201, 170);
@@ -429,36 +521,42 @@ input[type="email"],
   margin: 0.5rem;
 }
 
+
 .follow-social-media {
   font-family: "Kumbh Sans", sans-serif;
   font-size: 0.85rem;
 }
 
+
 /*****************************************************************/
 /* SOCIAL MEDIA ICON */
-
 .social-media {
   font-size: 30px;
   cursor: pointer;
 }
 
+
 .fa-facebook {
   color: blue;
 }
+
 
 .fa-instagram {
   color: palevioletred;
 }
 
+
 .fa-linkedin {
   color: rgb(28, 103, 128);
 }
+
 
 figcaption {
   display: block;
   font-size: 2rem;
   color: rgb(82, 3, 7);
 }
+
 
 /**********************************************/
 /* KEY FRAMES */
@@ -529,6 +627,14 @@ figcaption {
     font-size: 31px;
   }
 
+  .home-container {
+    display: block;
+  }
+
+  .desktop-img {
+    display: block;
+  }
+
   #firstname,
   #email,
   #bigMessage {
@@ -538,10 +644,10 @@ figcaption {
 }
 
 
+
 /* SCREENS OVER 500PX */
 @media screen and (min-width: 500px) and (max-width: 1440px) {
- 
- 
+
   #image-boxes {
     flex-direction: row;
 
@@ -555,12 +661,6 @@ figcaption {
   .desktop-heading {
     display: block;
     /* DESKTOP TEXT DISPLAY WAS NONE HERE CHANGED TO BLOCK */
-    background: rgb(231, 251, 235);
-    padding: 5%;
-  }
-
-  .desktop-heading {
-    font-size: 3rem;
   }
 
   .sendButton {
